@@ -1,0 +1,33 @@
+*.swp
+package-lock.json
+__pycache__
+.pytest_cache
+.venv
+*.egg-info
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+node_modules
+
+dist/
+frontend/newsletter-app/dist/
+frontend/newsletter-app/node_modules/
+
+# Environment files (contain secrets)
+.env
+.env.local
+.env.*.local
+
+# Security scan reports
+bandit-results.json
+**/bandit-results.json
+semgrep-report.json
+semgrep-report.txt
+**/semgrep-report.json
+**/semgrep-report.txt
+
+# OS files
+.DS_Store
+Thumbs.db

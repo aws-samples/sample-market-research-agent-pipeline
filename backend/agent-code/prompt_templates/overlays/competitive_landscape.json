@@ -1,0 +1,28 @@
+{
+    "role_description": "market research competitive intelligence analyst",
+    "category_description": "competitive landscape developments, strategic moves, and market positioning changes",
+    "category": "competitive_landscape",
+    "input_field": "research_topic",
+    "input_field_description": "market segment, industry, or competitive arena being monitored",
+    "customer_field": "client",
+    "customer_field_description": "client account name",
+
+    "title_pattern": "[Company] [action verb] [strategic move/product/initiative] in [market/segment]",
+    "title_examples": "Start with the company making the move\nUse action verb (e.g., \"Launches\", \"Expands\", \"Enters\", \"Acquires\", \"Pivots\", \"Announces\", \"Exits\")\nInclude specific product, service, or initiative name\nEnd with market segment or geography\nBe specific about what changed and who is affected\n\nGood examples:\n\"Microsoft Launches Copilot Studio for Enterprise AI Agent Development\"\n\"Salesforce Expands Data Cloud with Zero-Copy Partner Network\"\n\"Google Enters Healthcare AI Market with MedLM Foundation Models\"\n\"SAP Pivots S/4HANA to Cloud-Only Licensing Model for New Customers\"\n\"Amazon Launches Bedrock Agents with Multi-Step Reasoning for Enterprise\"\n\nBad examples (avoid):\n\"Big Tech Makes Strategic Move\" (too vague)\n\"Exciting Product Launch\" (promotional, unspecific)\n\"Company X Innovates\" (no detail on what changed)",
+
+    "summary_structure": "Summary should provide information structured as follows:\nSentence 1-2: What happened — the specific strategic move, product launch, or market entry with key details\nSentence 3-4: Market context — current market size, growth rate, key players, and competitive dynamics\nSentence 5-6: Competitive positioning — how this move positions the company relative to top 2-3 competitors\nSentence 7-8: Financial signals — pricing, investment amount, revenue targets, or market share implications\nSentence 9-10: Customer/market impact — who benefits, who is disrupted, adoption timeline\nSentence 11-12: Next steps — expected follow-up moves, competitive responses, timeline for market impact\nIf any information is not available, state \"not disclosed\" or \"not publicly available\" rather than inferring",
+
+    "keyword_instructions": "Include when available:\nCompany name (the mover)\nProduct/service name\nMarket segment\nCompetitor(s) affected\nTechnology or capability\nGeography/region\nStrategic intent (e.g., \"market entry\", \"platform play\", \"vertical expansion\")",
+
+    "entity_extraction_guidance": "company name, product/service name, market segment, key competitors mentioned, technology/capability, geography, and the core strategic move",
+
+    "kb_customer_query_guidance": "Construct a query including one or multiple of:\nMarket segment\nProduct/service category\nCompetitor names\nClient's current market position\nClient's product portfolio overlap\nClient's strategic priorities in this segment\nQuery should seek: How is the client positioned relative to this competitive move?",
+
+    "kb_syndicate_query_guidance": "Construct a query including one or multiple of:\nMarket segment\nProduct category\nMarket size and growth data\nCompetitive benchmarks\nIndustry analyst perspectives\nTechnology adoption trends\nQuery should seek: What are the market benchmarks and competitive dynamics relevant to this move?",
+
+    "kb_historical_query_guidance": "Construct a query including one or multiple of:\nCompany name\nProduct/service category\nMarket segment\nPrevious competitive moves\nHistorical market positioning\nQuery should seek: What prior intelligence exists about this company or market that provides context?",
+
+    "insights_structure": "Generate 3-5 strategic insights structured as:\n1. COMPETITIVE IMPACT: How does this change the competitive landscape? Who gains/loses position?\n2. MARKET SIGNAL: What does this move signal about broader market direction or technology adoption?\n3. CLIENT RELEVANCE: How does this specifically affect the client's position, opportunities, or threats?\n4. TIMING & URGENCY: Is this an early signal or a confirmed shift? What's the response window?\n5. PATTERN RECOGNITION: Does this connect to other recent moves forming a larger strategic pattern?",
+
+    "implications_structure": "Generate 3-5 actionable implications:\n1. STRATEGIC RESPONSE: What should the client consider doing in response?\n2. OPPORTUNITY: What new opportunities does this create for the client?\n3. RISK: What threats or risks does this pose if left unaddressed?\n4. TIMELINE: When do decisions need to be made? What are the critical milestones?\n5. MONITORING: What should be tracked going forward to assess the full impact?"
+}

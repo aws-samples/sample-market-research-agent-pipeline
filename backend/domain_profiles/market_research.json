@@ -1,0 +1,71 @@
+{
+    "profile_id": "market_research",
+    "display_name": "Market Research Intelligence",
+    "terminology": {
+        "topic_label": "Research Topic",
+        "customer_label": "Client Account",
+        "output_label": "Intelligence Brief",
+        "enrichment_label": "Search Taxonomy",
+        "kit_label": "Key Intelligence Topics",
+        "kiq_label": "Key Intelligence Questions"
+    },
+    "categories": [
+        {
+            "id": "competitive_landscape",
+            "display_name": "Competitive Landscape",
+            "agent": "competitive_landscape_agent",
+            "description": "Competitor moves, product launches, market positioning, and strategic shifts",
+            "enabled": true
+        },
+        {
+            "id": "deals_and_partnerships",
+            "display_name": "Deals & Partnerships",
+            "agent": "deals_partnerships_agent",
+            "description": "M&A activity, licensing deals, co-development agreements, joint ventures",
+            "enabled": true
+        }
+    ],
+    "data_sources": {
+        "web_search": {
+            "enabled": true,
+            "description": "General web search via configured domains"
+        },
+        "press_releases": {
+            "enabled": true,
+            "description": "Company press release monitoring"
+        },
+        "deal_intelligence": {
+            "enabled": true,
+            "description": "Crunchbase API for funding rounds, M&A, and company data"
+        },
+        "patent_databases": {
+            "enabled": false,
+            "description": "Patent filing search"
+        },
+        "sec_filings": {
+            "enabled": false,
+            "description": "SEC/regulatory filings"
+        },
+        "rss_feeds": {
+            "enabled": false,
+            "description": "RSS/Atom feed aggregation"
+        }
+    },
+    "knowledge_bases": {
+        "client_intelligence": {
+            "env_var": "CUSTOMER_KNOWLEDGE_BASE_ID",
+            "description": "Client-specific intelligence — portfolio, strategies, engagement history",
+            "metadata_filter_key": "customer"
+        },
+        "market_benchmarks": {
+            "env_var": "SYNDICATE_KNOWLEDGE_BASE_ID",
+            "description": "Market benchmarks, industry reports, analyst research",
+            "metadata_filter_key": "customer"
+        },
+        "historical_intelligence": {
+            "env_var": "HISTORICAL_KNOWLEDGE_BASE_ID",
+            "description": "Previously generated intelligence reports for continuity",
+            "metadata_filter_key": "customer"
+        }
+    }
+}

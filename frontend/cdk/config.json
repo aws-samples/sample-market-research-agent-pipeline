@@ -1,0 +1,11 @@
+{
+    "s3_website_hosting_bucket_name": "<YOUR_PREFIX>-frontend-website-bucket",
+    "agent_results_bucket": "<YOUR_PREFIX>-agent-results",
+    "enrichment_bucket": "<YOUR_PREFIX>-enrichment-results",
+    "user_pool_name": "<YOUR_PREFIX>-user-pool",
+    "app_client_name": "<YOUR_PREFIX>-app-client",
+    "identity_pool_name": "<YOUR_PREFIX>-identity-pool",
+    "allow_unauthenticated": false,
+    "self_sign_up_enabled": true,
+    "domains_config_s3_bucket": "<YOUR_PREFIX>-data-sources"
+}

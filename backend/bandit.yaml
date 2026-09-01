@@ -1,0 +1,14 @@
+exclude_dirs:
+  - cdk.out
+  - .venv
+  - .vscode
+  - .git
+  - architecture
+  - node_modules
+  - __pycache__
+  - '*.egg-info'
+  - dist
+  - build 
+  - .pytest_cache
+  - .mypy_cache
+  - htmlcov 

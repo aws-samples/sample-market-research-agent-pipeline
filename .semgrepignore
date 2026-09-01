@@ -1,0 +1,55 @@
+# Build and dependency directories
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# CDK output
+cdk.out/
+.cdk.staging/
+
+# Reports and logs
+*-report.txt
+*-report.json
+*.log
+
+# Lock files
+yarn.lock
+package-lock.json
+poetry.lock
+
+# Architecture diagrams
+architecture/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Config files (non-code)
+*.json
+*.yaml
+*.yml
+
+# Documentation
+*.md
+
+# Test data
+**/sample-s3-data/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+
+# Python cache
+*.pyo
+*.pyd
+.mypy_cache/

@@ -1,0 +1,93 @@
+{
+    "Comment": "A description of my state machine",
+    "StartAt": "preprocessing of .eml and .msg files",
+    "States": {
+        "preprocessing of .eml and .msg files": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::lambda:invoke",
+            "Output": "{% $states.result.Payload %}",
+            "Arguments": {
+                "FunctionName": "${DoclingPreProcessingLambdaArn}",
+                "Payload": "{% $states.input %}"
+            },
+            "Retry": [
+                {
+                    "ErrorEquals": [
+                        "Lambda.ServiceException",
+                        "Lambda.AWSLambdaException",
+                        "Lambda.SdkClientException",
+                        "Lambda.TooManyRequestsException"
+                    ],
+                    "IntervalSeconds": 1,
+                    "MaxAttempts": 3,
+                    "BackoffRate": 2,
+                    "JitterStrategy": "FULL"
+                }
+            ],
+            "Next": "Choice"
+        },
+        "Choice": {
+            "Type": "Choice",
+            "Choices": [
+                {
+                    "Next": "Success",
+                    "Condition": "{% ($states.input.status) = (\"preprocessed\") %}"
+                }
+            ],
+            "Default": "docling - parse and store .md in KB"
+        },
+        "Success": {
+            "Type": "Succeed"
+        },
+        "docling - parse and store .md in KB": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::lambda:invoke",
+            "Output": "{% $states.result.Payload %}",
+            "Arguments": {
+                "FunctionName": "${DoclingExtractionLambdaArn}",
+                "Payload": "{% $states.input %}"
+            },
+            "Retry": [
+                {
+                    "ErrorEquals": [
+                        "Lambda.ServiceException",
+                        "Lambda.AWSLambdaException",
+                        "Lambda.SdkClientException",
+                        "Lambda.TooManyRequestsException"
+                    ],
+                    "IntervalSeconds": 1,
+                    "MaxAttempts": 3,
+                    "BackoffRate": 2,
+                    "JitterStrategy": "FULL"
+                }
+            ],
+            "Next": "Choice (1)"
+        },
+        "Choice (1)": {
+            "Type": "Choice",
+            "Choices": [
+                {
+                    "Next": "Fail",
+                    "Condition": "{% (($states.input.status) = (\"FAILED\") or ($states.input.status) = (\"STOPPED\")) %}"
+                },
+                {
+                    "Next": "Success (1)",
+                    "Condition": "{% ($states.input.status) = (\"COMPLETE\") %}"
+                }
+            ],
+            "Default": "Wait Before Retry"
+        },
+        "Wait Before Retry": {
+            "Type": "Wait",
+            "Seconds": 60,
+            "Next": "docling - parse and store .md in KB"
+        },
+        "Fail": {
+            "Type": "Fail"
+        },
+        "Success (1)": {
+            "Type": "Succeed"
+        }
+    },
+    "QueryLanguage": "JSONata"
+}

@@ -1,0 +1,38 @@
+{
+    "domains": [
+        "reuters.com/business",
+        "bloomberg.com",
+        "techcrunch.com",
+        "businessinsider.com",
+        "forbes.com/business",
+        "cnbc.com",
+        "ft.com",
+        "wsj.com",
+        "venturebeat.com",
+        "theinformation.com"
+    ],
+    "url_patterns": [
+        {"inurl": "/article/", "exclude": "/video/"},
+        {"inurl": "/news/", "exclude": "/opinion/"},
+        {"inurl": "/2026/", "exclude": "/podcast/"},
+        {"inurl": "/story/", "exclude": "/sponsored/"}
+    ],
+    "excluded_domains": [
+        "forms.google.com",
+        "forms.gle",
+        "linkedin.com",
+        "twitter.com",
+        "facebook.com",
+        "youtube.com"
+    ],
+    "excluded_paths": [
+        "forum",
+        "board",
+        "login",
+        "signup",
+        "subscribe",
+        "podcast",
+        "video",
+        "sponsored"
+    ]
+}

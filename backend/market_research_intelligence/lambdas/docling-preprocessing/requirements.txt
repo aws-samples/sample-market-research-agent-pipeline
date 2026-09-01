@@ -1,0 +1,4 @@
+boto3
+extract-msg
+reportlab
+weasyprint

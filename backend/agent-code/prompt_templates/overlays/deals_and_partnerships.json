@@ -1,0 +1,28 @@
+{
+    "role_description": "market research business development and deals analyst",
+    "category_description": "partnership, M&A, and strategic deal activity across industries",
+    "category": "deals_and_partnerships",
+    "input_field": "research_topic",
+    "input_field_description": "market segment, industry, or deal arena being monitored",
+    "customer_field": "client",
+    "customer_field_description": "client account name",
+
+    "title_pattern": "[Company A] [verb] [deal type] with [Company B] for [asset/capability] in [market/segment]",
+    "title_examples": "Start with acquirer/licensee/lead party name\nUse action verb (e.g., \"Acquires\", \"Partners with\", \"Licenses\", \"Invests in\", \"Signs\", \"Merges with\")\nInclude deal type (acquisition, strategic partnership, JV, licensing, investment)\nEnd with asset/capability and market focus\n\nGood examples:\n\"Databricks Acquires MosaicML for $1.3B to Build Enterprise LLM Training Platform\"\n\"Snowflake Partners with Anthropic for Native AI Agent Integration in Data Cloud\"\n\"ServiceNow Invests $150M in AI Startup Hugging Face for Enterprise Model Hub\"\n\"Oracle Signs Multi-Year Cloud Infrastructure Deal with NVIDIA for AI Supercomputing\"\n\"Palo Alto Networks Acquires Talon Cyber Security to Expand Enterprise Browser Security\"\n\nBad examples (avoid):\n\"Big Deal Announced in Tech\" (too vague)\n\"Strategic Partnership Signed\" (promotional, unspecific)\n\"Company X and Y Team Up\" (lacks deal type and value detail)",
+
+    "summary_structure": "Summary should provide information structured as follows:\nSentence 1-2: Deal structure — transaction type, parties involved, their respective roles\nSentence 3-4: Asset details — what is being acquired/licensed/developed, technology or capability focus\nSentence 5-6: Financial terms — deal value, upfront payment, milestones, equity stakes, royalties\nSentence 7-8: Rights and scope — geographic scope, exclusivity, market segments covered, duration\nSentence 9-10: Strategic rationale — stated motivations from both parties, market gap being filled\nSentence 11-12: Timeline and next steps — expected close date, integration plans, regulatory approvals needed\nIf any information is not available, state \"terms undisclosed\" or \"not publicly available\" rather than inferring",
+
+    "keyword_instructions": "Include when available:\nAcquirer/lead company name\nTarget/partner company name\nDeal type (M&A, JV, licensing, investment)\nDeal value/financial terms\nTechnology or capability\nMarket segment\nGeography\nStrategic intent (e.g., \"platform consolidation\", \"vertical integration\", \"market access\")",
+
+    "entity_extraction_guidance": "acquirer/lead company, target/partner company, deal type (M&A, license, JV, investment, co-development), asset or capability name, financial terms, market/segment focus, and the strategic rationale",
+
+    "kb_customer_query_guidance": "Construct a query including one or multiple of:\nMarket segment\nCompanies involved in the deal\nClient's partnership/M&A activity in this space\nClient's competitive exposure to the deal parties\nClient's technology stack overlap\nClient's strategic priorities in the affected segment\nQuery should seek: How is the client positioned relative to this deal? Does it create competitive pressure or opportunity?",
+
+    "kb_syndicate_query_guidance": "Construct a query including one or multiple of:\nMarket segment\nDeal type and comparable transactions\nFinancial benchmarks for similar deals\nPartnership trends in this space\nMarket consolidation patterns\nAnalyst perspectives on deal rationale\nQuery should seek: What are the deal benchmarks and market comparables relevant to this transaction?",
+
+    "kb_historical_query_guidance": "Construct a query including one or multiple of:\nCompanies involved\nMarket segment\nPrevious deals or partnerships by these companies\nHistorical deal activity in this segment\nPrior coverage of the asset/technology\nQuery should seek: What prior deals or strategic context exists that informs the significance of this transaction?",
+
+    "insights_structure": "Generate 3-5 strategic insights structured as:\n1. DEAL SIGNIFICANCE: How does this deal change the competitive landscape? What capability gap does it fill?\n2. MARKET CONSOLIDATION: Does this represent a consolidation trend? Who are the likely next movers?\n3. CLIENT EXPOSURE: How does this deal affect the client — as competitor, partner, or customer of the deal parties?\n4. VALUATION SIGNAL: What does the deal value/structure signal about market valuations in this space?\n5. ECOSYSTEM IMPACT: How does this reshape the broader ecosystem of partners, platforms, or supply chains?",
+
+    "implications_structure": "Generate 3-5 actionable implications:\n1. PARTNERSHIP OPPORTUNITY: Does this create new partnership or counter-deal opportunities for the client?\n2. COMPETITIVE THREAT: Does this strengthen a competitor's position against the client?\n3. STRATEGIC RESPONSE: Should the client pursue similar deals, alternative partners, or organic development?\n4. CUSTOMER IMPACT: How might this deal affect the client's customers or prospects?\n5. MONITORING: What integration milestones, follow-on deals, or market reactions should be tracked?"
+}
