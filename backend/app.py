@@ -45,6 +45,10 @@ NagSuppressions.add_stack_suppressions(stack, [
         "id": "AwsSolutions-APIG3",
         "reason": "WAFv2 not required for prototype stage"
     },
+    {
+        "id": "AwsSolutions-APIG4",
+        "reason": "CORS preflight OPTIONS methods must be unauthenticated per HTTP spec; all POST methods use Cognito authorizer"
+    },
 ])
 
 app.synth()

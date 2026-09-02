@@ -1382,6 +1382,10 @@ class MarketResearchIntelligenceStack(Stack):
             "InvokeAgentApi",
             rest_api_name="Market Research Intelligence API",
             description="API Gateway for the Market Research Intelligence prototype",
+            default_method_options=apigw.MethodOptions(
+                authorization_type=apigw.AuthorizationType.COGNITO,
+                authorizer=cognito_authorizer,
+            ),
             default_cors_preflight_options=apigw.CorsOptions(
                 allow_origins=apigw.Cors.ALL_ORIGINS,
                 allow_methods=apigw.Cors.ALL_METHODS,
