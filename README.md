@@ -4,6 +4,12 @@ This prototype solution allows end users to get the latest updates and AI-genera
 
 The user interface is a single-page application (SPA) built using React.js and TailwindCSS.
 
+## Disclaimer
+
+> ⚠️ **Sample only — not production-ready.**
+> This project is provided as sample code for demonstration and educational purposes only. It is not intended for production use as-is. You are responsible for reviewing, testing, and hardening the code before using it in any production environment.
+> Deploying and running this solution will create AWS resources in your account that may incur costs. These include charges for AWS Lambda, Amazon S3, AWS Step Functions, Amazon API Gateway, Amazon CloudFront, Amazon Cognito, Amazon Bedrock, Amazon Bedrock Knowledge Bases, and AWS Secrets Manager. Review the [AWS Pricing](https://aws.amazon.com/pricing/) pages and monitor usage through the AWS Billing console.
+
 ---
 
 ## Prerequisites
